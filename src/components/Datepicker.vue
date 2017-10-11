@@ -432,7 +432,8 @@ export default {
      */
     getPageDecade () {
       let sD = Math.floor(this.pageDate.getFullYear() / 10) * 10
-      return sD + '\'s'
+      let ending = (this.translation.decadeEnding) ? this.translation.decadeEnding : 's';
+      return sD + `\'${ending}`;
     },
     changeMonth (incrementBy) {
       let date = this.pageDate
